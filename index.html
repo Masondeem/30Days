@@ -4,16 +4,31 @@
   <meta charset="UTF-8">
   <title>30 Day Countdown</title>
   <style>
-    body {
-      background-color: white;
-      color: black;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      color: white;
       font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #content {
       text-align: center;
-      margin-top: 20%;
+    }
+    .count {
+      font-size: 20vw; /* Very large number */
+      line-height: 1;
     }
     img {
-      max-width: 80%;
+      max-width: 90%;
       height: auto;
+    }
+    .final-text {
+      font-size: 3vw;
+      margin-top: 1em;
     }
   </style>
 </head>
@@ -21,7 +36,7 @@
   <div id="content"></div>
 
   <script>
-    // Set the countdown start date (Day 30 starts on June 30, 2025)
+    // Set the start date (Day 30 = June 30, 2025)
     const startDate = new Date('2025-06-30T00:00:00');
     const now = new Date();
 
@@ -31,11 +46,11 @@
     const contentDiv = document.getElementById('content');
 
     if (daysLeft > 0) {
-      contentDiv.innerHTML = `<h1>${daysLeft}</h1>`;
+      contentDiv.innerHTML = `<div class="count">${daysLeft}</div>`;
     } else {
       contentDiv.innerHTML = `
         <img src="IMG_2005.JPG" alt="Final Image">
-        <h2>jeb</h2>
+        <div class="final-text">jeb</div>
       `;
     }
   </script>
