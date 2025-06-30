@@ -17,9 +17,10 @@
     }
     #content {
       text-align: center;
+      width: 100%;
     }
     .count {
-      font-size: 20vw; /* Very large number */
+      font-size: 75vw; /* Massive font, scales with viewport width */
       line-height: 1;
     }
     img {
@@ -27,7 +28,7 @@
       height: auto;
     }
     .final-text {
-      font-size: 3vw;
+      font-size: 4vw;
       margin-top: 1em;
     }
   </style>
@@ -36,7 +37,6 @@
   <div id="content"></div>
 
   <script>
-    // Set the start date (Day 30 = June 30, 2025)
     const startDate = new Date('2025-06-30T00:00:00');
     const now = new Date();
 
